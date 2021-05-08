@@ -21,6 +21,8 @@ if(
             $student['local_govt'] = $row['local_govt'];
             $student['next_of_kin'] = $row['next_of_kin'];
             $student['jamb_score'] = $row['jamb_score'];
+            $student['admin_status'] = $row['admin_status'];
+            $student['image_name'] = $row['image_name'];
         }
     }
     else{

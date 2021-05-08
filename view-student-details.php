@@ -170,8 +170,9 @@ include('config/getSingleStudent.php');
           <div class="text-center col-sm-5 image-container"  style="background-color: #CC8B5E;border-radius:3px;">
 
             <div class="col-sm-12" style="padding:3px">
+              <img src="img/<?php echo ($student['image_name']); ?>">
               <h4 style="color:white;font-weight:bold"><?php echo ($student['name']); ?></h4>
-              <span class="label label-info">Status: Undecided  </span>
+              <h4><span class="label label-info"><?php echo ($student['admin_status']); ?></span></h4>
             </div>
           </div>
           <div class="col-sm-7 info-container">
@@ -217,7 +218,11 @@ include('config/getSingleStudent.php');
                <h4> Jamb Score: <?php echo ($student['jamb_score']); ?></h4>
               </div>        
             </div>
-   
+            <div class="col-sm-3">
+              <div class="card col-sm-12">
+                <h4> Status: <?php echo ($student['admin_status']); ?></h4>
+              </div>
+            </div>
           </div>          
         </div>       
     </div>

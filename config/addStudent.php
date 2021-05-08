@@ -27,10 +27,9 @@ if (
 	$state_of_origin = $_POST['stateOrigin'];
 	$local_govt = $_POST['originLocalG'];
 	$next_of_kin = $_POST['nextOfKin'];
-	$image_name = 'default.jpg';
 	$jamb_score = $_POST['jambScore'];
 
-	$insertNewStudent = "INSERT INTO account (first_name, middle_name, last_name, email, date_of_birth, gender, phone_number, home_address, state_of_origin, local_govt, next_of_kin, image_name, jamb_score) VALUES ('$first_name', '$middle_name', '$last_name',  '$email', '$date_of_birth', '$gender', '$phone_number', '$home_address', '$state_of_origin', '$local_govt', '$next_of_kin', '$image_name', '$jamb_score')";
+	$insertNewStudent = "INSERT INTO account (first_name, middle_name, last_name, email, date_of_birth, gender, phone_number, home_address, state_of_origin, local_govt, next_of_kin, jamb_score) VALUES ('$first_name', '$middle_name', '$last_name',  '$email', '$date_of_birth', '$gender', '$phone_number', '$home_address', '$state_of_origin', '$local_govt', '$next_of_kin', '$jamb_score')";
 
 	if (mysqli_query($conn, $insertNewStudent)){
 		$_SESSION['successful'] = 'New student information has just been successfully added';
