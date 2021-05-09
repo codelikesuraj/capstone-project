@@ -23,4 +23,4 @@ CREATE TABLE account(
     adm_status VARCHAR(64) NOT NULL DEFAULT 'undecided'
 );
 
-INSERT INTO account (id, first_name, middle_name, last_name, full_name, email, date_of_birth, gender, phone_number, home_address, state_of_origin, local_govt, next_of_kin, jamb_score) VALUES (1, 'abdulbaki', 'adabara', 'suraj', 'abdulbaki adabara suraj', 'codelikesuraj@gmail.com', '1999-12-09', 'male', '08188608295', 'yetkem road', 'kogi', 'okehi', 'fawaz', 235);
+INSERT INTO account (id, first_name, middle_name, last_name, full_name, email, date_of_birth, gender, phone_number, home_address, state_of_origin, local_govt, next_of_kin, jamb_score) VALUES (1, 'abdulbaki', 'adabara', 'suraj', 'abdulbaki adabara suraj', 'codelikesuraj@gmail.com', '1999-12-09', 'male', '08188608295', 'yetkem road', 'kogi', 'okehi', 'fawaz suraj', 235);
