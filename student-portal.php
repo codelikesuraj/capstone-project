@@ -113,19 +113,19 @@ session_start();
 				echo '
           			<div class="col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 alert alert-success alert-dismissable text-center" style="margin-top:20px">
             			<a href="" class="close" data-dismiss="alert" aria-label="close"> &times</a>
-            			<strong>Success </strong>' . $_SESSION['successful'] . '
+            			<strong>Success! </strong>' . $_SESSION['successful'] . '
           			</div>
         		';
-			} else if (isset($_SESSION['Oops']) && !empty($_SESSION['Oops'])) {
+			} else if (isset($_SESSION['oops']) && !empty($_SESSION['oops'])) {
 				echo '
           			<div class="col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 alert alert-danger alert-dismissable text-center" style="margin-top:20px">
             			<a href="" class="close" data-dismiss="alert" aria-label="close"> &times</a>
-            			<strong>Danger </strong>' . $_SESSION['Oops'] . '
+            			<strong>Danger! </strong>' . $_SESSION['oops'] . '
           			</div>
         		';
 			}
 			unset($_SESSION["successful"]);
-			unset($_SESSION["Oops"]);
+			unset($_SESSION["oops"]);
 			?>
 
 			<div class="col-md-10 col-md-offset-1" style="padding-bottom:80px">
@@ -174,15 +174,19 @@ session_start();
 							<div class="col-md-6 col-sm-6">
 								<div class="form-group">
 									<label for="dob" class="control-label"> Date Of Birth</label>
-									<input type="date" name="dob" id="dob" class="form-control" required="required" placeholder="Enter LastName">
+									<input type="date" name="dob" id="dob" class="form-control" required="required" placeholder="Enter Date of Birth">
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6">
-								<div class="form-group" style="margin-top:40px;">
-									<label for="gender" class="control-label">Male</label>
-									<input type="radio" name="gender" id="gendermale" name="gender" value="male" required="required">
-									<label for="gender" class=" control-label">Female</label>
-									<input type="radio" name="gender" id="genderfemale" value="female" required="required">
+								<div class="form-group">
+									<label for="gender" class="control-label">Gender</label>
+									<div class="form-control">
+										<label for="gender" class="control-label">Male</label>
+										<input type="radio" name="gender" id="gendermale" name="gender" value="male" required="required">
+										&nbsp;&nbsp;&nbsp;
+										<label for="gender" class=" control-label">Female</label>
+										<input type="radio" name="gender" id="genderfemale" value="female" required="required">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -190,7 +194,7 @@ session_start();
 							<div class="col-md-6 col-sm-6">
 								<div class="form-group">
 									<label for="phonenumber" class="control-label"> Phone Number</label>
-									<input type="text" name="phoneNumber" id="phoneNumber" class="form-control" required="required" placeholder="Enter PhoneNumber">
+									<input type="text" name="phoneNumber" id="phoneNumber" class="form-control" required="required" placeholder="Enter Phone Number">
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6">
@@ -225,7 +229,7 @@ session_start();
 							<div class="col-md-6 col-sm-6">
 								<div class="form-group">
 									<label for="nextofkin" class="control-label"> Next Of Kin</label>
-									<input type="text" name="nextOfKin" id="nextOfKin" class="form-control" required="required" placeholder="Enter The Name OF NextOfKin">
+									<input type="text" name="nextOfKin" id="nextOfKin" class="form-control" required="required" placeholder="Enter The Name Of Next Of Kin">
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6">

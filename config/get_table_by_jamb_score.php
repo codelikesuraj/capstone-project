@@ -30,10 +30,10 @@ if(isset($_POST['jamb_score'])){
             echo '
                 <tr>
                     <td>'.($counter+1).'</td>
-                    <td>'.$row['full_name'].'</td>
-                    <td>'.$row['gender'].'</td>
-                    <td>'.$row['jamb_score'].'</td>
-                    <td>'.$row['adm_status'].'</td>
+                    <td>'.ucwords(htmlentities($row['full_name'])).'</td>
+                    <td>'.ucfirst(htmlentities($row['gender'])).'</td>
+                    <td>'.htmlentities($row['jamb_score']).'</td>
+                    <td>'.ucfirst(htmlentities($row['adm_status'])).'</td>
                     <td><a href="view-student-details.php?id='.$row['id'].'">View</a></td>
                 </tr>
             ';

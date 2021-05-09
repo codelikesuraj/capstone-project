@@ -14,5 +14,8 @@ if($result && mysqli_num_rows($result)>0)
         $students[$counter]['adm_status'] = $row['adm_status'];
         $counter++;
     }
+}else{
+    header('Location: student-portal.php');
+    $_SESSION['oops'] = "There are no records in database, add new record below";
 }
 ?>

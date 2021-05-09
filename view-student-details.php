@@ -203,39 +203,39 @@ include('config/getSingleStudent.php');
       <div class="text-center col-sm-5 image-container" style="background-color: #CC8B5E;border-radius:3px;">
 
         <div class="col-sm-12" style="padding:3px">
-          <img src="img/<?php echo ($student['image_name']); ?>">
-          <h4 style="color:white;font-weight:bold"><?php echo ($student['name']); ?></h4>
-          <h4><span class="label label-info"><?php echo ($student['adm_status']); ?></span></h4>
+          <img src="uploads/<?php echo htmlentities($student['image_name']); ?>">
+          <h4 style="color:white;font-weight:bold"><?php echo htmlentities($student['name']); ?></h4>
+          <h4><span class="label label-info"><?php echo htmlentities($student['adm_status']); ?></span></h4>
         </div>
       </div>
       <div class="col-sm-7 info-container">
         <legend class="bg-info">Personal Information</legend>
         <div class="card col-sm-12">
-          <h4>Email: <?php echo ($student['email']); ?></h4>
+          <h4>Email: <?php echo htmlentities($student['email']); ?></h4>
         </div>
         <div class="card col-sm-12">
-          <h4>Gender: <?php echo ($student['gender']); ?></h4>
+          <h4>Gender: <?php echo ucfirst(htmlentities($student['gender'])); ?></h4>
         </div>
         <div class="card col-sm-12">
-          <h4>Phone Number: <?php echo ($student['phone_number']); ?></h4>
+          <h4>Phone Number: <?php echo htmlentities($student['phone_number']); ?></h4>
         </div>
         <div class="card col-sm-12">
-          <h4>Date Of Birth: <?php echo ($student['date_of_birth']); ?></h4>
+          <h4>Date Of Birth: <?php echo htmlentities($student['date_of_birth']); ?></h4>
         </div>
         <div class="card col-sm-12">
-          <h4>Address: <?php echo ($student['address']); ?></h4>
+          <h4>Address: <?php echo ucfirst(htmlentities($student['address'])); ?></h4>
         </div>
       </div>
       <div class="col-md-12" style="float:left;clear:left; margin-top:10px">
         <legend class="bg-info">Other Information</legend>
         <div class="col-sm-3">
           <div class="card col-sm-12">
-            <h4>State Of Origin: <?php echo ($student['state_of_origin']); ?></h4>
+            <h4>State Of Origin: <?php echo ucwords(htmlentities($student['state_of_origin'])); ?></h4>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="card col-sm-12">
-            <h4> Local Govt: <?php echo ($student['local_govt']); ?></h4>
+            <h4> Local Govt: <?php echo ucwords(htmlentities($student['local_govt'])); ?></h4>
           </div>
         </div>
       </div>
@@ -243,17 +243,17 @@ include('config/getSingleStudent.php');
         <legend class="bg-info">Academics Related Information</legend>
         <div class="col-sm-3">
           <div class="card col-sm-12">
-            <h4>Next Of Kin: <?php echo ($student['next_of_kin']); ?></h4>
+            <h4>Next Of Kin: <?php echo ucwords(htmlentities($student['next_of_kin'])); ?></h4>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="card col-sm-12">
-            <h4> Jamb Score: <?php echo ($student['jamb_score']); ?></h4>
+            <h4> Jamb Score: <?php echo htmlentities($student['jamb_score']); ?></h4>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="card col-sm-12">
-            <h4> Status: <?php echo ($student['adm_status']); ?></h4>
+            <h4> Status: <?php echo ucfirst(htmlentities($student['adm_status'])); ?></h4>
           </div>
         </div>
         <div class="col-sm-3">

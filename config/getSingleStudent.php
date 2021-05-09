@@ -33,3 +33,4 @@ if(
     header('Location: dashboard.php');
     exit();
 }
+?>
