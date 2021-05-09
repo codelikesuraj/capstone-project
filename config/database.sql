@@ -1,5 +1,3 @@
-DROP DATABASE capstone_project;
-
 CREATE DATABASE capstone_project;
 
 USE capstone_project;
