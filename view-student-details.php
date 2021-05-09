@@ -172,7 +172,7 @@ include('config/getSingleStudent.php');
             <div class="col-sm-12" style="padding:3px">
               <img src="img/<?php echo ($student['image_name']); ?>">
               <h4 style="color:white;font-weight:bold"><?php echo ($student['name']); ?></h4>
-              <h4><span class="label label-info"><?php echo ($student['admin_status']); ?></span></h4>
+              <h4><span class="label label-info"><?php echo ($student['adm_status']); ?></span></h4>
             </div>
           </div>
           <div class="col-sm-7 info-container">
@@ -220,9 +220,23 @@ include('config/getSingleStudent.php');
             </div>
             <div class="col-sm-3">
               <div class="card col-sm-12">
-                <h4> Status: <?php echo ($student['admin_status']); ?></h4>
+                <h4> Status: <?php echo ($student['adm_status']); ?></h4>
               </div>
             </div>
+            <div class="col-sm-3">
+              <div class="card col-sm-12">
+                <form method="post" action="config/changeStatus.php">
+                  <h4>Change status:<br/>
+                    <input type="hidden" name="id" value="<?php echo($_GET['id']); ?>">
+                    <select name="adm_status" required>
+                      <option value="undecided">--select--</option>
+                      <option value="undecided">Undecided</option>
+                      <option value="admitted">Admitted</option>
+                    </select>
+                    <input type="submit" name="submit" id="submit" style="background-color:#5e6474;color:white;font-weight:bold;" value="Change">
+                  </h4>
+                </form>
+              </div>
           </div>          
         </div>       
     </div>

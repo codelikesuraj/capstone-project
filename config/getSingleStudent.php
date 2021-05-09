@@ -11,7 +11,7 @@ if(
     {
         while($row = mysqli_fetch_assoc($result)){
             $student['id'] = $row['id'];
-            $student['name'] = $row['first_name'].' '.$row['middle_name'].' '.$row['last_name'];
+            $student['name'] = $row['full_name'];
             $student['email'] = $row['email'];
             $student['date_of_birth'] = $row['date_of_birth'];
             $student['gender'] = $row['gender'];
@@ -21,7 +21,7 @@ if(
             $student['local_govt'] = $row['local_govt'];
             $student['next_of_kin'] = $row['next_of_kin'];
             $student['jamb_score'] = $row['jamb_score'];
-            $student['admin_status'] = $row['admin_status'];
+            $student['adm_status'] = $row['adm_status'];
             $student['image_name'] = $row['image_name'];
         }
     }

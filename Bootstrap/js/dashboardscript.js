@@ -1,16 +1,17 @@
       //search table by name
-      function searchByNamee(){
-        var name= document.getElementById("name").value;
+      function searchByName(){
+        var name= document.getElementById("name").value.trim();
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState == 4 && this.status == 200) {
              document.getElementById("studentTable").innerHTML =this.responseText;
           }
         }
-        xhttp.open("POST", "get_table_by_name.php", true);
+        xhttp.open("POST", "config/get_table_by_name.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send("name="+name);
-       
+        console.log("name length is "+name.length);
+        console.log("name value is "+name);
+        xhttp.send("name="+name+"&name_length="+name.length);
       }
 
       // search table by gender and jamb score
@@ -75,9 +76,9 @@
       }
 
       // fake duplicate functions
-      function searchByName(){
-        console.log('Search by name');
-      }
+     // function searchByName(){
+       // console.log('Search by name');
+      //}
       function searchByGenderAndJScore(){
         console.log('Search by gender and jscore');
       }

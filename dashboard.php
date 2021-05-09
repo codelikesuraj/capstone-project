@@ -141,7 +141,7 @@
                     <td>'.$students[$i]['name'].'</td>
                     <td>'.$students[$i]['gender'].'</td>
                     <td>'.$students[$i]['jamb_score'].'</td>
-                    <td>'.$students[$i]['admin_status'].'</td>
+                    <td>'.$students[$i]['adm_status'].'</td>
                     <td>
                       <a href="view-student-details.php?id='.$students[$i]['id'].'">View</a>
                     </td>

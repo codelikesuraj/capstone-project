@@ -29,7 +29,7 @@ if (
 	$next_of_kin = $_POST['nextOfKin'];
 	$jamb_score = $_POST['jambScore'];
 
-	$insertNewStudent = "INSERT INTO account (first_name, middle_name, last_name, email, date_of_birth, gender, phone_number, home_address, state_of_origin, local_govt, next_of_kin, jamb_score) VALUES ('$first_name', '$middle_name', '$last_name',  '$email', '$date_of_birth', '$gender', '$phone_number', '$home_address', '$state_of_origin', '$local_govt', '$next_of_kin', '$jamb_score')";
+	$insertNewStudent = "INSERT INTO account (first_name, middle_name, last_name, full_name, email, date_of_birth, gender, phone_number, home_address, state_of_origin, local_govt, next_of_kin, jamb_score) VALUES ('$first_name', '$middle_name', '$last_name',  '$first_name $middle_name $last_name', '$email', '$date_of_birth', '$gender', '$phone_number', '$home_address', '$state_of_origin', '$local_govt', '$next_of_kin', '$jamb_score')";
 
 	if (mysqli_query($conn, $insertNewStudent)){
 		$_SESSION['successful'] = 'New student information has just been successfully added';
