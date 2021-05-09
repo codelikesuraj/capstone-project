@@ -29,8 +29,7 @@ if(in_array($environment, $local_env)):
 
 //  environment is not localhost or 127.0.0.1
 else:
-    $url = parse_url('mysql://bf669104db9850:be16b333@us-cdbr-east-03.cleardb.co
-	m/heroku_d3bc72f83cb3167?reconnect=true');
+    $url = parse_url('mysql://bf669104db9850:be16b333@us-cdbr-east-03.cleardb.com/heroku_d3bc72f83cb3167?reconnect=true');
     $servername = $url['host'];
     $username = $url['user'];
     $password = $url['pass'];
