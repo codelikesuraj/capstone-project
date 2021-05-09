@@ -1,7 +1,7 @@
 <?php
 include("connectionDB.php");
 $students = array();
-$getStudent = "SELECT * FROM account";
+$getStudent = "SELECT * FROM account ORDER BY full_name ASC";
 $result = mysqli_query($conn, $getStudent);
 if($result && mysqli_num_rows($result)>0)
 {

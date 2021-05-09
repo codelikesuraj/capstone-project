@@ -1,16 +1,15 @@
 <?php
 include ('connectionDB.php');
-if(isset($_POST['name']) && isset($_POST['name_length'])){
-    $name = trim($_POST['name']);
-    $name_length = intval($_POST['name_length'], 10);
+if(isset($_POST['adm_status']) && !empty($_POST['adm_status'])){
+    $adm_status = trim($_POST['adm_status']);
     $students = array();
     $counter = 0;
-    if($name_length === 0){
-        $getStudentsByName = "SELECT * FROM account ORDER BY full_name ASC";
-    }else {
-        $getStudentsByName = "SELECT * FROM account WHERE full_name LIKE '%$name%' ORDER BY full_name ASC";
+    if($adm_status == 'undecided' || $adm_status == 'admitted'){
+        $getStudentsByAdmissionStatus = "SELECT * FROM account WHERE adm_status = '$adm_status' ORDER BY full_name ASC";
+    }else{
+        $getStudentsByAdmissionStatus = "SELECT * FROM account ORDER BY full_name ASC";
     }
-    $result = mysqli_query($conn, $getStudentsByName);
+    $result = mysqli_query($conn, $getStudentsByAdmissionStatus);
     
     echo '
         <thead>
@@ -25,7 +24,7 @@ if(isset($_POST['name']) && isset($_POST['name_length'])){
         </thead>
         <tbody>
     ';
-
+    
     if($result && mysqli_num_rows($result)>0){
         while($row = mysqli_fetch_assoc($result)){
             echo '
