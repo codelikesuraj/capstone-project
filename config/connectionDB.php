@@ -37,6 +37,15 @@ else:
     $dbname = substr($url["path"],1);
 endif;
 
+echo $servername;
+echo '<br/>';
+echo $username;
+echo '<br/>';
+echo $password;
+echo '<br/>';
+echo $dbname;
+echo '<br/>';
+echo '<br/>';
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn){
